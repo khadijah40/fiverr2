@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+body {
+    background: #000;
+}
+.max-width {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* Navbar styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 20px 0;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 27px;
+}
+.navbar .links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+.navbar .links li:hover :where(a, span) {
+    color:#dfd8dc ;
+}
+.navbar .links .language {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+}
+.navbar .links span {
+    font-size: 1.2rem;
+    color: #fff;
+}
+.navbar .links .signin a {
+    border: 1px solid #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+.navbar .links .signin a:hover {
+    color: #fff;
+    background: #d4cece;
+    border-color: transparent;
+}
+
+.navbar .links .join a {
+    border: 1px solid #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+.navbar .links .join a:hover {
+    color: #fff;
+    background: #d4cece;
+    border-color: transparent;
+}
+
+/* Hero section styling */
+.hero {
+    height: 100vh;
+    background-image: url("hero.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.hero .content {
+    position: absolute;
+    top: 30%;
+}
+.slider {
+    background-color: white;
+    text-align: center;
+    padding: 20px 0;
+    overflow: hidden; /* Hide horizontal scrollbar */
+    position: relative; /* Added position for button placement */
+  }
+  
+  .slider h1 {
+    margin-bottom: 20px;
+  }
+  
+  .slider-container {
+    display: flex;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    scroll-snap-type: x mandatory; /* Enable snap scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    gap: 10px; /* Gap between images */
+    padding: 0 10px; /* Padding to control space around images */
+    align-items: center; /* Center the content vertically */
+    position: relative; /* Added position for button placement */
+  }
+  
+  .slides {
+    display: flex;
+  }
+  
+  .slide {
+    flex: 0 0 auto;
+    scroll-snap-align: center; /* Snap each slide to the center */
+    width: calc(20% - 10px); /* 20% width for each slide with a 10px gap */
+  }
+  
+  .slide img {
+    width:19.5vw;
+    height: 60vh;
+    margin: 3px;
+    padding: 20px;
+
+  }
+  
+  /* Scroll button styling */
+  .scroll-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    transition: all 0.2s ease; /* Add smooth transition effect */
+    position: absolute; /* Position the buttons */
+  }
+  
+  /* Styling for the "Previous" button */
+  .scroll-button.prev {
+    margin-right: 5px; /* Reduced margin */
+    padding: 5px 10px; /* Adjusted padding to make it smaller */
+    font-size: 14px; /* Adjusted font size to make it smaller */
+    left: 0; /* Position it on the left */
+    display: none; /* Initially hide it */
+  }
+  
+  /* Styling for the "Next" button */
+  .scroll-button.next {
+    color: black;
+    margin-left: 10px;
+    right: 0; /* Position it on the right */
+  }
+  
+  /* Change button color on hover */
+  .scroll-button:hover {
+    color: black;
+
+    background-color: #ccc;
+  }
+.content h2 {
+    color: #fff;
+    font-size: 3rem;
+    width: 600px;
+    line-height: 65px;
+}
+.content .search-field {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    width: 600px;
+    position: relative;
+    margin-top: 30px;
+}
+.search-field input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+.search-field .search-btn {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: #1dbf73;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    transition: background 0.2s ease;
+}
+.search-field .search-btn:hover {
+    background: #19a463;
+}
+.content .popular-tags {
+    display: flex;
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: 25px;
+}
+.content .popular-tags .link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 15px;
+    list-style: none;
+}
+.popular-tags .link li a {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 4px 12px;
+    border-radius: 50px;
+    transition: 0.2s ease;
+}
+.popular-tags .link li a:hover {
+    background: #fff;
+    color: #000;
+}
+.shop-section{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #e2e7e6;
+}
+/* Styling for the slider container */
+.slider-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+/* Styling for individual slider images */
+.slider-container img {
+    width: 20%;
+    min-width: 0;
+}
+
+/* Styling for round navigation buttons */
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.slider-nav button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 60%;
+    padding: 5px;
+    width: 40px; /* Adjust the width of the buttons */
+    height: 40px; /* Adjust the height of the buttons */
+    font-size: 20px; /* Adjust the font size of the buttons */
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
